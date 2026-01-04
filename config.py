@@ -11,13 +11,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""Configuration constants for FluxFrame addon."""
+"""Configuration constants for GalaxyRend addon."""
 
 # Addon identification
-ADDON_NAME = "FluxFrame"
+ADDON_NAME = "GalaxyRend"
 
 # Workspace settings
-WORKSPACE_NAME = "FluxFrame"
+WORKSPACE_NAME = "GalaxyRend"
 
 # Property limits
 INPUT_TEXT_MAX_LENGTH = 1024

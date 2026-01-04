@@ -11,32 +11,32 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""FluxFrame - Blender addon for the FluxFrame distributed render network."""
+"""GalaxyRend - Blender addon for the GalaxyRend distributed render network."""
 
 bl_info = {
-    "name": "FluxFrame",
+    "name": "GalaxyRend",
     "author": "RichoKD",
-    "description": "Blender addon for the FluxFrame distributed render network",
+    "description": "Blender addon for the GalaxyRend distributed render network",
     "blender": (2, 80, 0),
     "version": (1, 0, 0),
-    "location": "View3D > Sidebar > FluxFrame",
+    "location": "View3D > Sidebar > GalaxyRend",
     "category": "Render",
 }
 
 import bpy
 
-from .operators import FLUXFRAME_OT_create_workspace, FLUXFRAME_OT_submit
-from .panels import FLUXFRAME_PT_main_panel
-from .preferences import FluxFramePreferences
-from .properties import FluxFrameProperties
+from .operators import GalaxyRend_OT_create_workspace, GalaxyRend_OT_submit
+from .panels import GalaxyRend_PT_main_panel
+from .preferences import GalaxyRendPreferences
+from .properties import GalaxyRendProperties
 
 # List of classes to register
 classes = (
-    FluxFrameProperties,
-    FluxFramePreferences,
-    FLUXFRAME_OT_submit,
-    FLUXFRAME_OT_create_workspace,
-    FLUXFRAME_PT_main_panel,
+    GalaxyRendProperties,
+    GalaxyRendPreferences,
+    GalaxyRend_OT_submit,
+    GalaxyRend_OT_create_workspace,
+    GalaxyRend_PT_main_panel,
 )
 
 
@@ -45,12 +45,12 @@ def register():
     for cls in classes:
         bpy.utils.register_class(cls)
 
-    bpy.types.Scene.fluxframe_props = bpy.props.PointerProperty(type=FluxFrameProperties)
+    bpy.types.Scene.galaxyrend_props = bpy.props.PointerProperty(type=GalaxyRendProperties)
 
 
 def unregister():
     """Unregister all classes and properties."""
-    del bpy.types.Scene.fluxframe_props
+    del bpy.types.Scene.galaxyrend_props
 
     for cls in reversed(classes):
         bpy.utils.unregister_class(cls)

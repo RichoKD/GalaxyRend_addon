@@ -11,7 +11,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""Blender properties and data for FluxFrame addon."""
+"""Blender properties and data for GalaxyRend addon."""
 
 from bpy.props import StringProperty
 from bpy.types import PropertyGroup
@@ -19,8 +19,8 @@ from bpy.types import PropertyGroup
 from .config import INPUT_TEXT_MAX_LENGTH
 
 
-class FluxFrameProperties(PropertyGroup):
-    """Property group for FluxFrame addon settings."""
+class GalaxyRendProperties(PropertyGroup):
+    """Property group for GalaxyRend addon settings."""
 
     input_text: StringProperty(
         name="Input Text",

@@ -11,15 +11,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""Addon preferences for FluxFrame addon."""
+"""Addon preferences for GalaxyRend addon."""
 
 from bpy.types import AddonPreferences
 
 from .config import ADDON_NAME
 
 
-class FluxFramePreferences(AddonPreferences):
-    """Addon preferences for FluxFrame."""
+class GalaxyRendPreferences(AddonPreferences):
+    """Addon preferences for GalaxyRend."""
 
     bl_idname = __package__
 

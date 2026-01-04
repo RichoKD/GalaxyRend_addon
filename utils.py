@@ -11,23 +11,23 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""Utility functions for FluxFrame addon."""
+"""Utility functions for GalaxyRend addon."""
 
 import bpy
 
 from .config import WORKSPACE_NAME
 
 
-def get_fluxframe_props(context):
-    """Get the FluxFrame properties from the scene.
+def get_galaxyrend_props(context):
+    """Get the GalaxyRend properties from the scene.
 
     Args:
         context: Blender context object.
 
     Returns:
-        FluxFrameProperties instance or None if not available.
+        GalaxyRendProperties instance or None if not available.
     """
-    return getattr(context.scene, "fluxframe_props", None)
+    return getattr(context.scene, "galaxyrend_props", None)
 
 
 def workspace_exists(name=WORKSPACE_NAME):

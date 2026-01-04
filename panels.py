@@ -11,29 +11,29 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""UI panels and layout for FluxFrame addon."""
+"""UI panels and layout for GalaxyRend addon."""
 
 from bpy.types import Panel
 
 from .config import ADDON_NAME
-from .utils import get_fluxframe_props
+from .utils import get_galaxyrend_props
 
 
-class FLUXFRAME_PT_main_panel(Panel):
+class GalaxyRend_PT_main_panel(Panel):
     """Main panel in the sidebar."""
 
     bl_label = ADDON_NAME
-    bl_idname = "FLUXFRAME_PT_main_panel"
+    bl_idname = "GalaxyRend_PT_main_panel"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = ADDON_NAME
 
     def draw(self, context):
         layout = self.layout
-        props = get_fluxframe_props(context)
+        props = get_galaxyrend_props(context)
 
         # Create workspace button
-        layout.operator("fluxframe.create_workspace", icon="WORKSPACE")
+        layout.operator("galaxyrend.create_workspace", icon="WORKSPACE")
 
         layout.separator()
 
@@ -42,4 +42,4 @@ class FLUXFRAME_PT_main_panel(Panel):
             layout.prop(props, "input_text", text="")
 
         # Submit button
-        layout.operator("fluxframe.submit", icon="CHECKMARK")
+        layout.operator("galaxyrend.submit", icon="CHECKMARK")

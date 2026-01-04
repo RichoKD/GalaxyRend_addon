@@ -11,27 +11,27 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""User actions and operations for FluxFrame addon."""
+"""User actions and operations for GalaxyRend addon."""
 
 import bpy
 from bpy.types import Operator
 
 from .config import WORKSPACE_NAME
-from .utils import get_fluxframe_props, get_workspace, workspace_exists
+from .utils import get_galaxyrend_props, get_workspace, workspace_exists
 
 
-class FLUXFRAME_OT_submit(Operator):
+class GALAXYREND_OT_submit(Operator):
     """Submit button operator."""
 
-    bl_idname = "fluxframe.submit"
+    bl_idname = "galaxyrend.submit"
     bl_label = "Submit"
     bl_description = "Submit the input text"
     bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
-        props = get_fluxframe_props(context)
+        props = get_galaxyrend_props(context)
         if props is None:
-            self.report({"ERROR"}, "FluxFrame properties not available")
+            self.report({"ERROR"}, "GalaxyRend properties not available")
             return {"CANCELLED"}
 
         input_text = props.input_text
@@ -44,12 +44,12 @@ class FLUXFRAME_OT_submit(Operator):
         return {"FINISHED"}
 
 
-class FLUXFRAME_OT_create_workspace(Operator):
-    """Create a blank FluxFrame workspace."""
+class GalaxyRend_OT_create_workspace(Operator):
+    """Create a blank GalaxyRend workspace."""
 
-    bl_idname = "fluxframe.create_workspace"
-    bl_label = "Create FluxFrame Workspace"
-    bl_description = "Create a new blank workspace for FluxFrame"
+    bl_idname = "galaxyrend.create_workspace"
+    bl_label = "Create GalaxyRend Workspace"
+    bl_description = "Create a new blank workspace for GalaxyRend"
     bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
